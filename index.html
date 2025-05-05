@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conway's Game of Life</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Conway's Game of Life</h1>
+        
+        <div class="controls">
+            <button id="startBtn">Start</button>
+            <button id="stopBtn">Stop</button>
+            <button id="clearBtn">Clear</button>
+            <button id="randomBtn">Random</button>
+        </div>
+        
+        <div class="speed-control">
+            <label for="speedRange">Speed: </label>
+            <input type="range" id="speedRange" min="50" max="1000" value="100">
+        </div>
+        
+        <div class="canvas-container">
+            <canvas id="gameCanvas"></canvas>
+        </div>
+        
+        <div class="instructions">
+            <h2>Instructions</h2>
+            <p>Click on cells to toggle them between alive and dead states.</p>
+            <p>Press "Start" to begin the simulation.</p>
+            <p>Press "Stop" to pause the simulation.</p>
+            <p>Press "Clear" to reset the grid.</p>
+            <p>Press "Random" to create a random pattern.</p>
+            <p>Use the slider to adjust the simulation speed.</p>
+        </div>
+        
+        <div class="rules">
+            <h2>Rules</h2>
+            <ol>
+                <li>Any live cell with fewer than two live neighbors dies (underpopulation).</li>
+                <li>Any live cell with two or three live neighbors lives on to the next generation.</li>
+                <li>Any live cell with more than three live neighbors dies (overpopulation).</li>
+                <li>Any dead cell with exactly three live neighbors becomes a live cell (reproduction).</li>
+            </ol>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
