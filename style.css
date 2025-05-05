@@ -28,6 +28,7 @@ h1 {
     justify-content: center;
     gap: 10px;
     margin-bottom: 15px;
+    flex-wrap: wrap;
 }
 
 button {
@@ -43,6 +44,11 @@ button {
 
 button:hover {
     background-color: #2980b9;
+}
+
+button.active {
+    background-color: #27ae60;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 #stopBtn {
@@ -69,6 +75,30 @@ button:hover {
     background-color: #8e44ad;
 }
 
+#zoomInBtn {
+    background-color: #f39c12;
+}
+
+#zoomInBtn:hover {
+    background-color: #d35400;
+}
+
+#zoomOutBtn {
+    background-color: #16a085;
+}
+
+#zoomOutBtn:hover {
+    background-color: #1abc9c;
+}
+
+#panBtn {
+    background-color: #2ecc71;
+}
+
+#panBtn:hover {
+    background-color: #27ae60;
+}
+
 .speed-control {
     display: flex;
     justify-content: center;
@@ -76,7 +106,7 @@ button:hover {
     margin-bottom: 20px;
 }
 
-.speed-control label {
+speed-control label {
     margin-right: 10px;
 }
 
@@ -84,11 +114,21 @@ button:hover {
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
+    overflow: hidden;
 }
 
 canvas {
     border: 2px solid #2c3e50;
     background-color: white;
+    cursor: pointer;
+}
+
+.canvas-pan {
+    cursor: grab !important;
+}
+
+.canvas-pan:active {
+    cursor: grabbing !important;
 }
 
 .instructions, .rules {
